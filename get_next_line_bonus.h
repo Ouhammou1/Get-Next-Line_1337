@@ -6,12 +6,11 @@
 /*   By: bouhammo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:16:39 by bouhammo          #+#    #+#             */
-/*   Updated: 2024/02/11 15:16:46 by bouhammo         ###   ########.fr       */
+/*   Updated: 2024/02/27 19:53:27 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef NEXT_LINE
-# define NEXT_LINE
-
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # include <fcntl.h>
 # include <limits.h>
 # include <stdio.h>
@@ -31,6 +30,6 @@ char	*get(char *str);
 char	*next(char *str);
 char	*ft_strdup(char *str);
 int		ft_strlen(char *str);
-char	*ft_strchr(char *str, int c);
+char	*ft_strchr(char *str, char c);
 
 #endif

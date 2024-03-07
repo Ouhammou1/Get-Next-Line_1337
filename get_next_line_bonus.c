@@ -6,7 +6,7 @@
 /*   By: bouhammo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:18:02 by bouhammo          #+#    #+#             */
-/*   Updated: 2024/02/11 15:18:08 by bouhammo         ###   ########.fr       */
+/*   Updated: 2024/02/27 19:52:09 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line_bonus.h"
@@ -39,6 +39,7 @@ char	*get(char *str)
 	}
 	return (ptr);
 }
+
 char	*next(char *str)
 {
 	int		i;

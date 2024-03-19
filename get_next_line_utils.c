@@ -6,22 +6,22 @@
 /*   By: bouhammo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:42:33 by bouhammo          #+#    #+#             */
-/*   Updated: 2024/02/27 19:55:36 by bouhammo         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:55:10 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(char *s)
 {
 	int	i;
 
-	i = 0;
-	if (str == NULL)
+	if (s == NULL)
 	{
 		return (0);
 	}
-	while (str[i] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
 		i++;
 	}
@@ -30,20 +30,20 @@ int	ft_strlen(char *str)
 
 char	*ft_strdup(char *s)
 {
-	int		k;
-	char	*ptr;
 	int		i;
+	int		len;
+	char	*ptr;
 
 	i = 0;
-	if (!s[0])
+	if (s[i] == '\0')
 		return (NULL);
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	k = ft_strlen(s);
-	ptr = (char *)malloc((k + 1) * sizeof(char));
+	len = ft_strlen(s);
+	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	while (i < k)
+	while (i < len)
 	{
 		ptr[i] = s[i];
 		i++;
@@ -79,16 +79,22 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (ptr);
 }
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchar(char *s, char c)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (s == NULL)
 	{
-		if (str[i] == c)
-			return (str + i);
+		return (NULL);
+	}
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			return (s + i);
+		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
